@@ -1,0 +1,46 @@
+•	.lib is collection of .obj files
+COMPILER, LINKER, LOADER:
+Following steps happens in Compilation process (Converts high level language to machine level language):
+•	C Preprocessing
+•	Lexical Analysis
+•	Syntax analyzer
+•	Symantic analyzer
+•	Pre optimization
+•	Code generation
+•	Post optimization
+•	Assembler
+•	Linker & Loader
+
+C Preprocessor:
+•	First step in compilation. Handles - #defines, #includes, macros , conditional statements
+Compilation:
+•	Lexical Analyzer:
+Reads characters and converts it into tokens.
+Tokens are – identifiers, constants, keywords, operators
+•	Syntactic Analyzer:
+It checks for the syntax in the code. Generates syntax error in case of syntax error
+•	Semantic Analyzer:
+It includes type checking, or check if a variable is declared before using it. Or checks if any wrong assignment, like generates error in case a pointer is assigned to an integer.
+•	Preoptimization:
+This optimizes code in the following format:
+
+Dead code elimination – Suppose a set of lines in a code is not required will be eliminated for e.g., if an else part is never required or an if part will never be executed, this will be eliminated.
+
+Sub code elimination-  If there is a possibility to replace set of characters or lines with a generic characters or line then it will replace it the simpler version. E.g., if x=a+b , and further in all places a+b can be replaced by x
+
+Loop optimization-If a particular piece of code is never used in loop, then it will be placed out so that every time loop executes, un necessary code won’t be parsed again and again.
+
+•	Code generation:
+Assembly code will be generated. Most often used variables are stored in registers.
+•	Post optimization:
+CPU dependent, suppose there are multiple intermediate jumps, then the are converted into one single jump.
+ 
+Linker:
+ Compiler invokes the linker as the last step in compiling a program.
+Combines several object files to create executables
+Loader:
+Loads executable files into the primary memory of the machine
+
+
+
+
