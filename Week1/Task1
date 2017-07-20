@@ -1,1 +1,62 @@
+Following are the files that are created when a simple hello world console program is created:
+Project Created:
+Myexperiments
+
+1.	In Debug Folder:
+•	Myexperiments.exe
+•	Myexperiments.ilk
+•	Myexperiments.pdb
+Myexperiments.exe – application 
+Myexperiments.ilk – Incremental linker file
+Myexperiments.pdb – Program debug database
+
+2.	Myexperiments visual studio solution
+3.	Myexperiments Project folder which contains the following:
+•	Debug folder
+•	HelloWolrld Source file
+•	MyExperiments vc++ project
+•	MyExperiments.vcx proj VC++ project filter files
+•	MyExperiments.vcx visual studio project user option file
+
+Debug Folder in turn consists of:
+ 
+
+Brief info of the above files:
+
+Obj File:
+Obj files or the intermediate files are the compiled binary files that has not been linked yet. 
+Many of these fragments are combined and linked to create the executables.
+PDB file:
+These are the files created from source files during compilation. 
+It contains:
+Symbols in a module, Addresses, file name and line numbers in which these symbols are defined.
+
+These can be embedded in to binary files but because of the increasing size, modern compilers write them into a separate file with all the symbolic information into a separate file called program database file
+They are useful in debug builds. They allow your program to debug step by step. We can see jump in to a function, see what’s really happening in source code instead of assembler.
+Incremental linker files. (.ilk file)
+These are used by linker to speed up the execution of exe / dll’s.
+e.g., when you have 200 files and you just make change to single file and recompile execution happens quicker because of this .ilk file
+It helps in packing the .obj file created from source files and if there are any .lib files to generate the executables(.exe / dll’s)
+In simple words, it updates your exe with any of the small changes that you make and compile.
+For runtime good performance, you might have to disable this for release mode build and keep it for debug mode build.
+
+Linker and compiler
+
+Compiler parses source code and converts it into assembly code and invokes the assembler which further converts this code into machine code providing the binary files. This object file contains compiled code in binary format.
+Produces machine language instructions corresponding to the source code
+e.g., if we have 3 files, once compiled, 3 separate .obj /.o files will be created. Further linker does the job
+
+Linker produces the final compilation output from object files produced by the compiler.
+i.e., creates single executable file from multiple files.
+
+
+.lib
+.lib file contains code , exported functions and data elements from the library. Linker identifies  whatever is required and puts it into the exe.
+4. Compile a project without VS is it possible if so how?
+
+
+for the 4th point. You create a project using visual studio.
+But you can build the project without VS in couple of ways, but want you to look at how to do it using .mak file
+Apart from this if there other ways let me know
+For this above fourth point, I will dig in more tomorrow. Was held up with other work here
 
